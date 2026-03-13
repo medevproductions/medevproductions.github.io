@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Programmer & Designer</title>
+    <meta name="description" content="Professional and creative portfolio of a developer and designer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="blob-bg"></div>
+    <div class="blob-bg blob-2"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <img src="logo.svg" alt="medevproductions Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li class="dropdown">
+                    <a href="#portfolio" class="dropbtn">Projects <i class="fas fa-chevron-down"
+                            style="font-size: 0.8em; margin-left: 4px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="https://boomvibestore.com" target="_blank" rel="noopener noreferrer">Boomvibestore</a>
+                    </div>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content fade-in">
+                <p class="greeting">Hi, I am</p>
+                <h1 class="name">medevproductions</h1>
+                <h2 class="role">Programmer <span class="gradient-text">& Designer</span></h2>
+                <p class="description">
+                    I transform complex ideas into elegant, intuitive, and efficient digital experiences.
+                    Specialized in creating modern web solutions from visual design to server logic.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn btn-primary">See my work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact me</a>
+                </div>
+            </div>
+            <div class="hero-image slide-in-right">
+                <div class="image-placeholder">
+                    <i class="fas fa-code"></i>
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>I am a passionate professional bridging the gap between visual aesthetics and flawless software
+                        engineering. My focus is on creating products that not only work perfectly, but also delight the
+                        user.</p>
+
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h3><i class="fas fa-laptop-code"></i> Development</h3>
+                            <div class="skill-tags">
+                                <span>HTML5 / CSS3</span>
+                                <span>JavaScript (ES6+)</span>
+                                <span>React / Vue</span>
+                                <span>Node.js</span>
+                                <span>Python</span>
+                                <span>SQL / NoSQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-paint-brush"></i> Design</h3>
+                            <div class="skill-tags">
+                                <span>UI / UX</span>
+                                <span>Figma / Adobe XD</span>
+                                <span>Wireframing</span>
+                                <span>Prototyping</span>
+                                <span>Responsive Design</span>
+                                <span>Color Theory</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-image" style="background: linear-gradient(45deg, #1f2937, #374151);">
+                        <i class="fas fa-shopping-cart fa-3x"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A complete e-commerce platform with an admin panel, dynamic shopping cart, and payment
+                            gateway.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://boomvibestore.com/" class="project-link"><i
+                                    class="fas fa-external-link-alt"></i> View Demo</a>
+                            <a href="https://github.com/medevproductions/boomvibestore" class="project-link"><i
+                                    class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card fade-in" style="transition-delay: 0.1s">
+                    <div class="project-image" style="background: linear-gradient(45deg, #3730a3, #4f46e5);">
+                        <i class="fas fa-chart-line fa-3x"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Interactive control panel for real-time data visualization with custom charts and exportable
+                            reports.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card fade-in" style="transition-delay: 0.2s">
+                    <div class="project-image" style="background: linear-gradient(45deg, #065f46, #10b981);">
+                        <i class="fas fa-mobile-alt fa-3x"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Productivity App</h3>
+                        <p>Task management application with a minimalist interface, reminder system, and cloud
+                            synchronization.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Redux</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title fade-in">Let's Work Together</h2>
+            <div class="contact-container fade-in">
+                <div class="contact-info">
+                    <h3>Have a project in mind?</h3>
+                    <p>I am available for freelance work and full-time opportunities. Let's discuss how I can help you
+                        achieve your goals.</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> hello@yourdomain.com</li>
+                        <li><i class="fas fa-phone"></i> +34 123 456 789</li>
+                        <li><i class="fas fa-map-marker-alt"></i> City, Country</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required placeholder=" " rows="5"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="back-to-top-container">
+        <a href="#home" class="btn btn-primary back-to-top" aria-label="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.svg" alt="medevproductions Logo" class="footer-logo-img">
+            </div>
+            <p>&copy; 2026 medevproductions. All rights reserved.</p>
+            <p class="footer-note">Designed and coded with <i class="fas fa-heart"></i> and coffee.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
