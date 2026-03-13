@@ -54,36 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(element);
     });
 
-    // 4. Manejo del formulario de contacto
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Simular envío
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            btn.style.opacity = '0.8';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent';
-                btn.classList.add('btn-success');
-                btn.style.background = '#10b981'; // Color verde
-                contactForm.reset();
-
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.background = '';
-                    btn.style.opacity = '1';
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-    }
 
     // 5. Efecto parallax sutil en elementos de fondo
     document.addEventListener('mousemove', (e) => {
@@ -96,4 +66,31 @@ document.addEventListener('DOMContentLoaded', () => {
             blob.style.transform = `translate(${mouseX * speed}px, ${mouseY * speed}px)`;
         });
     });
+    // 6. WhatsApp floating button copy to clipboard logic
+    const whatsappBtn = document.getElementById('whatsapp-btn');
+    const toast = document.getElementById('toast');
+
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', () => {
+            const phoneNumber = "+58 426 471-2564";
+            
+            // Try using modern clipboard API
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                showToast();
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+                // Fallback approach if needed could be added here
+            });
+        });
+    }
+
+    function showToast() {
+        if (!toast) return;
+        toast.classList.add('show');
+        
+        // Remove class after 3 seconds (animation handles 0.5s fade in + 2.5s wait + 0.5 fadeout)
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
 });

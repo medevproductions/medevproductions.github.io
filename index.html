@@ -98,21 +98,21 @@
         </section>
 
         <section id="portfolio" class="portfolio">
-            <h2 class="section-title fade-in">Featured Projects</h2>
+            <h2 class="section-title fade-in">Current Projects</h2>
             <div class="projects-grid">
                 <!-- Proyecto 1 -->
                 <div class="project-card fade-in">
-                    <div class="project-image" style="background: linear-gradient(45deg, #1f2937, #374151);">
-                        <i class="fas fa-shopping-cart fa-3x"></i>
+                    <div class="project-image"
+                        style="background-image: url('logoe.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     </div>
                     <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
+                        <h3>Boomvibestore</h3>
                         <p>A complete e-commerce platform with an admin panel, dynamic shopping cart, and payment
                             gateway.</p>
                         <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                            <span>JS</span>
+                            <span>WordPress</span>
+                            <span>PostgreSQL</span>
                         </div>
                         <div class="project-links">
                             <a href="https://boomvibestore.com/" class="project-link"><i
@@ -123,47 +123,7 @@
                     </div>
                 </div>
 
-                <!-- Proyecto 2 -->
-                <div class="project-card fade-in" style="transition-delay: 0.1s">
-                    <div class="project-image" style="background: linear-gradient(45deg, #3730a3, #4f46e5);">
-                        <i class="fas fa-chart-line fa-3x"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Interactive control panel for real-time data visualization with custom charts and exportable
-                            reports.</p>
-                        <div class="project-tech">
-                            <span>Vue.js</span>
-                            <span>D3.js</span>
-                            <span>Firebase</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Proyecto 3 -->
-                <div class="project-card fade-in" style="transition-delay: 0.2s">
-                    <div class="project-image" style="background: linear-gradient(45deg, #065f46, #10b981);">
-                        <i class="fas fa-mobile-alt fa-3x"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Productivity App</h3>
-                        <p>Task management application with a minimalist interface, reminder system, and cloud
-                            synchronization.</p>
-                        <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Redux</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -175,9 +135,8 @@
                     <p>I am available for freelance work and full-time opportunities. Let's discuss how I can help you
                         achieve your goals.</p>
                     <ul class="contact-list">
-                        <li><i class="fas fa-envelope"></i> hello@yourdomain.com</li>
-                        <li><i class="fas fa-phone"></i> +34 123 456 789</li>
-                        <li><i class="fas fa-map-marker-alt"></i> City, Country</li>
+                        <li><i class="fas fa-envelope"></i> medevproductions@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +58 426 471 2564</li>
                     </ul>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -186,23 +145,11 @@
                         <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" required placeholder=" ">
-                        <label for="name">Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" required placeholder=" ">
-                        <label for="email">Email Address</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" required placeholder=" " rows="5"></textarea>
-                        <label for="message">Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        <span>Send Message</span> <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
+                <div class="contact-action" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <a href="mailto:medevproductions@gmx.com" class="btn btn-primary submit-btn" style="text-decoration: none; padding: 1.5rem 2.5rem; font-size: 1.2rem; width: auto; max-width: 100%; border-radius: 40px;">
+                        <span>Send an Email</span> <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -222,6 +169,16 @@
             <p class="footer-note">Designed and coded with <i class="fas fa-heart"></i> and coffee.</p>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <button class="whatsapp-float" id="whatsapp-btn" aria-label="Copy WhatsApp Number">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class="fas fa-check-circle"></i> <span>WhatsApp number copied</span>
+    </div>
 
     <script src="script.js"></script>
 </body>

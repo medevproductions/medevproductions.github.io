@@ -691,10 +691,82 @@ footer {
     z-index: 10;
 }
 
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    background-color: #1ebe57;
+}
+
+/* Toast Notification */
+.toast-notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-main);
+    text-align: center;
+    border-radius: 30px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1002;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.toast-notification i {
+    color: #10b981;
+    font-size: 1.2rem;
+}
+
+.toast-notification.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
         padding-top: 150px;
     }
@@ -714,19 +786,19 @@ footer {
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 180px;
+        padding-top: 250px;
     }
 
     .nav-logo {
-        height: 80px; /* Reduced for mobile so it fits on screen */
+        height: 160px; /* Bigger for mobile */
     }
 
     .nav-links {
         position: fixed;
-        top: 100px; /* Space for the 80px logo and paddings */
+        top: 210px; /* Space for the 160px logo and paddings */
         left: -100%;
         width: 100%;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 210px);
         background: rgba(10, 10, 15, 0.98);
         backdrop-filter: blur(15px);
         flex-direction: column;
@@ -751,5 +823,13 @@ footer {
 
     .role {
         font-size: 1.8rem;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
     }
 }
