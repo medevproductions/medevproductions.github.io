@@ -684,6 +684,33 @@ footer {
     max-width: 450px;
 }
 
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+}
+
+.footer-social-link i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.footer-social-link:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
 /* Back to Top */
 .back-to-top-container {
     display: flex;
