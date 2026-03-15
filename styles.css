@@ -823,17 +823,43 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 210px);
-        background: rgba(10, 10, 15, 0.98);
-        backdrop-filter: blur(15px);
+        background: rgba(10, 10, 15, 0.65); /* More transparent to allow elegant blur */
+        backdrop-filter: blur(25px); /* Strong elegant blur */
+        -webkit-backdrop-filter: blur(25px); /* Safari support */
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: 0.4s ease-in-out;
+        gap: 3rem; /* Increase gap for elegance */
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
+        pointer-events: none; /* Ignore clicks while hidden */
+        opacity: 0;
     }
 
     .nav-links.active {
         left: 0;
+        pointer-events: auto; /* Enable clicks */
+        opacity: 1;
+    }
+
+    /* Elegant Link States */
+    .nav-links a {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 0.5rem 1.5rem;
+        border-radius: 12px;
+        transition: var(--transition-smooth);
+    }
+    
+    .nav-links a:active,
+    .nav-links a:focus,
+    .dropdown-content a:active,
+    .dropdown-content a:focus {
+        background-color: rgba(59, 130, 246, 0.2); /* Secondary color faint bg */
+        color: var(--secondary); /* The theme secondary blue color */
+        transform: scale(1.1);
     }
 
     .mobile-menu-btn {
