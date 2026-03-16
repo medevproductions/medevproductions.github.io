@@ -306,6 +306,31 @@ section {
     font-size: 4rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.typing-effect {
+    display: inline-block;
+    overflow: hidden; /* Hide text as it types */
+    white-space: nowrap; /* Keep the text on one line */
+    border-right: 4px solid var(--primary); /* The blinking cursor */
+    width: 0;
+    animation: 
+        typing 2s steps(20, end) forwards,
+        blink-caret 0.75s step-end infinite;
+    max-width: 100%;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Cursor blinking animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary); }
 }
 
 .role {
@@ -354,6 +379,144 @@ section {
     50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
     75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
     100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+/* Pricing Section */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: center; /* helps aligning the scaled middle card */
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    position: relative;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card.popular {
+    transform: scale(1.05);
+    background: rgba(20, 20, 30, 0.85); /* Slightly darker */
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 1; /* Make it pop over others */
+}
+
+.pricing-card.popular:hover {
+    transform: translateY(-10px) scale(1.05); 
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.pricing-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.pricing-card .price {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.pricing-card .price span {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    color: var(--primary);
+}
+
+.pricing-card .price span.cents {
+    margin-top: 0.5rem;
+}
+
+.price-old {
+    font-size: 1.6rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-align: center;
+    margin-bottom: -0.5rem; /* pull up the actual price */
+}
+
+.price-old span {
+    font-size: 1rem;
+    color: rgba(156, 163, 175, 0.7); /* muted extra */
+}
+
+.price-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: -1.2rem; /* Bring it closer to the price */
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.pricing-desc {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    min-height: 48px; /* Alignment for cards with less text */
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 3rem;
+    flex: 1; /* pushes button to bottom */
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+    color: var(--text-main);
+}
+
+.pricing-features i {
+    color: var(--accent); /* Accent pink colour to look awesome */
+    font-size: 1.1rem;
+}
+
+.pricing-btn {
+    width: 100%;
 }
 
 /* About Section */
@@ -824,6 +987,14 @@ footer {
 
     .skill-tags {
         justify-content: center;
+    }
+
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+    
+    .pricing-card.popular:hover {
+        transform: translateY(-10px) scale(1);
     }
 
     .contact-list li {
